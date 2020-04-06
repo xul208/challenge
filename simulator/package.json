@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "nodemon src/app.js",
+    "test": "mocha"
   },
   "author": "shekhar",
   "license": "ISC",
@@ -19,5 +20,8 @@
     "pg": "^7.8.0",
     "uuid": "^3.3.2",
     "asciichart": "1.5.15"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.1"
   }
 }
