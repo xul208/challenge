@@ -1,6 +1,3 @@
-const csv = require('csvtojson');
-const db = require('../utils/db');
-const async = require('async');
 const fs = require('fs');
 
 const readJSONFile = (req, res) => {

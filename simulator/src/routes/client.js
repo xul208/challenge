@@ -1,4 +1,5 @@
-let clientTest = require('../controller/clientTest');
+const clientTest = require('../controller/clientTest');
+const simulator = require('../controller/simulator');
 
 exports.default = app => {
   // root path
@@ -10,9 +11,9 @@ exports.default = app => {
       method: 'get',
     });
   });
+  app.get('/run/:rate', simulator.simulate);
+  app.get('/run/', simulator.simulate);
 
-  // debug
-  app.get('/readJSONFile/:id', clientTest.readJSONFile);
   app.get('/readJSONFile/', clientTest.readJSONFile);
 
   return app;
