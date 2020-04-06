@@ -26,11 +26,11 @@ const simulate = (req, res) => {
     const testKitchen = new Kitchen(orders, shelves, serveRate, x => {
       const entry = {
         clock: x.clock,
-        shelf1: x.shelves[0].items,
-        shelf2: x.shelves[1].items,
-        shelf3: x.shelves[2].items,
-        shelf4: x.shelves[3].items,
-        incoming: x.delivers,
+        hot: x.shelves[0].items,
+        cold: x.shelves[1].items,
+        frozen: x.shelves[2].items,
+        overflow: x.shelves[3].items,
+        incoming_drivers: x.delivers,
       };
       result.push(entry);
       if (result.length >= MAX_SIMULATION_TIME) {
